@@ -97,16 +97,20 @@ public class MyTest01NodeModel extends NodeModel {
             // the column spec (see above)
             DataCell[] cells = new DataCell[3];
             cells[0] = new StringCell("String_" + i); 
-            cells[1] = new DoubleCell(0.5 * i); 
+            cells[1] = new DoubleCell(0.15 * i); 
             cells[2] = new IntCell(i);
             DataRow row = new DefaultRow(key, cells);
             container.addRowToTable(row);
             
+            
             // check if the execution monitor was canceled
             exec.checkCanceled();
             exec.setProgress(i / (double)m_count.getIntValue(), 
-                "Adding row " + i);
+                "Adding row --- " + i);
         }
+        
+        this.setWarningMessage("Test warning message ---> 01 mac!");
+        
         // once we are done, we close the container and return its table
         container.close();
         BufferedDataTable out = container.getTable();
