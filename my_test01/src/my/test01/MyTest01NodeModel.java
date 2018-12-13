@@ -109,7 +109,7 @@ public class MyTest01NodeModel extends NodeModel {
                 "Adding row --- " + i);
         }
         
-        this.setWarningMessage("Test warning message ---> 01 mac!");
+        this.setWarningMessage("Test warning message ---> 02 mac + win !!");
         
         // once we are done, we close the container and return its table
         container.close();
