@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MyTest01-Node extension for KNIME Workbench
+Bundle-SymbolicName: my.test01; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: mytest01.jar
+Bundle-Activator: my.test01.MyTest01NodePlugin
+Bundle-Vendor: NK
+Require-Bundle: org.eclipse.core.runtime,
+ org.knime.workbench.core,
+ org.knime.workbench.repository,
+ org.knime.base
+Bundle-ActivationPolicy: lazy
+Export-Package: my.test01
+
